@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+
+body {
+  font-family: "Montserrat" !important;
+}
+
+:root {
+  --LINEAR: linear-gradient(180deg, #f1a4fa 0%, #80eff5 100%);
+}
+.background__lineaire {
+  background: linear-gradient(90deg, #2c1970 1.95%, #3b2999 99.75%);
+}
+.lineaire {
+  --background-linear: linear-gradient(
+    95deg,
+    #2c1970 37.19%,
+    #2c1970 64.54%,
+    #010101 84.63%
+  );
+  background: var(--background-linear);
+  height: 771px;
+  width: 100%;
+  border-end-end-radius: 290px;
+}
+
+.text-lineaire {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+
+  line-height: 24px; /* 150% */
+  background: linear-gradient(0deg, #a55bf6 33.85%, #fdfdfd 99.99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lineare {
+  background: var(
+    --button-linear,
+    linear-gradient(90deg, #6929af 1.95%, #3b2999 99.75%)
+  );
+}
+
+.blur-background {
+  border-radius: 7.228px;
+  background: rgba(68, 38, 185, 0.2);
+  backdrop-filter: blur(5.964260578155518px);
+  height: 55.62px;
+}
+
+.header__text {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px; /* 112.5% */
+  letter-spacing: -0.96px;
+  background: var(--LINEAR, linear-gradient(180deg, #f1a4fa 0%, #80eff5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border__color {
+  border: 1px solid #f1a4fa;
+}
+
+.apply {
+  background: var(--LINEAR, linear-gradient(180deg, #f1a4fa 0%, #80eff5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12.512px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
