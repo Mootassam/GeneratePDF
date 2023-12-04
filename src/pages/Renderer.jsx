@@ -42,23 +42,51 @@ const styles = StyleSheet.create({
 
 function renderTableData() {
   return Array.from({ length: 244 }).map((item, index) => (
-    <View style={styles.tr} key={index}>
-      <View style={styles.td}>
-        <Text style={styles.text}>React-PDF</Text>
-      </View>
-      <View style={styles.td}>
-        <Text style={styles.text}>3 User</Text>
-      </View>
-      <View style={styles.td}>
-        <Text style={styles.text}>2019-02-20-202-02-19</Text>
-      </View>
-      <View style={styles.td}>
-        <Text style={styles.text}>5$</Text>
+    <View>
+      <View style={styles.tr} key={index}>
+        <View style={styles.td}>
+          <Text style={styles.text}>React-PDF</Text>
+        </View>
+        <View style={styles.td}>
+          <Text style={styles.text}>3 User</Text>
+        </View>
+        <View style={styles.td}>
+          <Text style={styles.text}>2019-02-20-202-02-19</Text>
+        </View>
+        <View style={styles.td}>
+          <Text style={styles.text}>5$</Text>
+        </View>
       </View>
     </View>
   ));
 }
+const TextAfterTable = () => {
+  return (
+    <View>
+      <Text>Im the best in the word</Text>
+    </View>
+  );
+};
 
+const renderTable = () => {
+  const pageSize = "A4";
+
+  return (
+    <Page size={pageSize} style={styles.page}>
+      <View>
+        <Text>Im the best in the world</Text>
+      </View>
+    </Page>
+  );
+};
+
+const renderAll = () => {
+  return (
+    <>
+      {renderPages()} {renderTable()}
+    </>
+  );
+};
 function renderPages() {
   const pageSize = "A4";
   const itemsPerPage = 25; // You can adjust this based on your needs
@@ -89,7 +117,9 @@ function renderPages() {
           </View>
           {dataForPage}
         </View>
-        <Text style={styles.pageNumber}>{pageNumber} / {totalPages}</Text>
+        <Text style={styles.pageNumber}>
+          {pageNumber} / {totalPages}
+        </Text>
       </Page>
     );
   }
@@ -98,7 +128,7 @@ function renderPages() {
 }
 
 function Renderer() {
-  return <Document>{renderPages()}</Document>;
+  return <Document>{renderAll()}</Document>;
 }
 
 export default Renderer;
